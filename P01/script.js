@@ -10,7 +10,8 @@ document
 // All functions
 // Function to show error
 function showError(input, message) {
-    const formControl = input.parentElement
+    const formControl = input.parentElement;
+    formControl.className = 'form-control error';
 }
 
 
