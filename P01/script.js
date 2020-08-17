@@ -12,8 +12,14 @@ document
 function showError(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
+    small.innerText = message;
 }
-
+// Function to show success
+function showSuccess(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+}
 
 //this an event listener for the form on submit
 const form = document.getElementById('form');
@@ -24,5 +30,9 @@ const cpassword = document.getElementById('cpassword');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    if (username.value === '') {}
+    if (username.value === '') {
+        showError(username, 'Username is required!')
+    } else {
+        showSuccess(username);
+    }
 })
