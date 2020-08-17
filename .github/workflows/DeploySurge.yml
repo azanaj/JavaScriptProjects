@@ -30,7 +30,7 @@
         
     # Step to install surge
     - name: installing surge
-    run: npm install --global surge
+      run: npm install --global surge
 
     # deploying app to surge
     - name: Deploying project to surge
