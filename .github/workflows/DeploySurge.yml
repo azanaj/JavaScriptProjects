@@ -4,14 +4,14 @@
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on:
+  on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
+  jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -25,14 +25,15 @@ jobs:
     # Runs a single command using the runners shell
     - name: Setup Node
       uses: actions/setup-node@v2-beta
-     with:
+      with:
         node-version: '12'
         
     # Step to install surge
-  - name: installing surge
+    - name: installing surge
     run: npm install --global surge
 
     # deploying app to surge
-  - name: Deploying Project to surge
-    run: surge ./ azanaj_jsprojects.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+    - name: Deploying project to surge
+      run: surge ./ azanaj_jsprojects.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+
         
