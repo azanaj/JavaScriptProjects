@@ -97,14 +97,16 @@
     
     button.home {
         cursor: pointer;
-        background-color: rgb(224, 221, 221);
+        background-color: rgb(177, 173, 173);
         border: 2px lightgrey;
-        border-radius: 4px;
         color: white;
         font-size: 16px;
         padding: 8px;
-        margin-top: 20px;
-        width: 100px
+        width: 83%;
+        border-radius: 4px;
+        margin-top: 10px;
+        margin-left: 39px;
+        margin-bottom: 40px;
     }
     
     a {
