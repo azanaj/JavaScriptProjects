@@ -35,4 +35,19 @@ form.addEventListener('submit', function(e) {
     } else {
         showSuccess(username);
     }
+    if (email.value === '') {
+        showError(email, 'email is required!')
+    } else {
+        showSuccess(email);
+    }
+    if (password.value === '') {
+        showError(password, 'password is required!')
+    } else {
+        showSuccess(password);
+    }
+    if (cpassword.value === '') {
+        showError(cpassword, 'confirm your password!')
+    } else {
+        showSuccess(cpassword);
+    }
 })
