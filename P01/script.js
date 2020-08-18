@@ -31,7 +31,7 @@ const cpassword = document.getElementById('cpassword');
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     if (username.value === '') {
-        showError(username, 'Username is required!')
+        showError(username, 'Field is empty!')
     } else {
         showSuccess(username);
     }
@@ -46,7 +46,7 @@ form.addEventListener('submit', function(e) {
         showSuccess(password);
     }
     if (cpassword.value === '') {
-        showError(cpassword, 'confirm your password!')
+        showError(cpassword, "Field can't be left empty!")
     } else {
         showSuccess(cpassword);
     }
