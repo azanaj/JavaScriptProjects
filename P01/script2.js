@@ -1,5 +1,13 @@
-// All functions
+/* This Backup Code
+-Document object model (dom) 
+node 
+document
+      doctype
+      html*/
 
+//-we can use var, let or const
+
+// All functions
 // Function to show error
 function showError(input, message) {
     const formControl = input.parentElement;
@@ -7,33 +15,17 @@ function showError(input, message) {
     const small = formControl.querySelector('small');
     small.innerText = message;
 }
-
 // Function to show success
 function showSuccess(input) {
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
 }
 
-// Function to show validation
+// Function to show success
 function isValidEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-
-// Function to check if required field have data
-function checkRequired(inputArray) {
-    inputArray.forEach(function(input) {
-        if (input.value === '') {
-            //console.log(input.id);
-            showError(input, ' field is empty!') //add input.id + or ${input.id} 
-        } else {
-            showSuccess(input);
-        }
-    });
-}
-
-//function to get the id of the input field with proper case
-//function getFieldId(input){return input.id.charAT(0).toUpperCase() + input.id.slice(1);}
 
 //this an event listener for the form on submit
 const form = document.getElementById('form');
@@ -44,5 +36,27 @@ const cpassword = document.getElementById('cpassword');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    checkRequired([username, email, password, cpassword]);
+    if (username.value === '') {
+        showError(username, 'Field is empty!')
+    } else {
+        showSuccess(username);
+    }
+    if (email.value === '') {
+        showError(email, 'email is required!')
+    } else if (!isValidEmail(email.value)) {
+        showError(email, "Invalid Email!")
+
+    } else {
+        showSuccess(email);
+    }
+    if (password.value === '') {
+        showError(password, 'password is required!')
+    } else {
+        showSuccess(password);
+    }
+    if (cpassword.value === '') {
+        showError(cpassword, "Field can't be left empty!")
+    } else {
+        showSuccess(cpassword);
+    }
 })

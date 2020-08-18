@@ -1,0 +1,119 @@
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    * {
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --success-color: rgb(44, 175, 44);
+        --error-color: rgb(179, 39, 4);
+    }
+    
+    body {
+        background: rgb(2, 43, 96);
+        background: linear-gradient(6deg, rgba(2, 43, 96, 1) 8%, rgba(0, 18, 24, 1) 48%, rgba(2, 20, 45, 1) 92%);
+        font-family: 'Open Sans', sans-serif;
+        /*remember the next 5 lines will be used everywhere*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+    
+    .container {
+        background: rgb(2, 43, 96);
+        /*to round the edges*/
+        border-radius: 5px;
+        /*to make it hover looking*/
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        width: 450px;
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: white;
+    }
+    
+    .form {
+        padding: 30px 40px;
+    }
+    
+    .form-control {
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+    
+    .form-control label {
+        color: white;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .form-control input {
+        border: 2px solid rgb(10, 75, 173);
+        border-radius: 3px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .form-control input:focus {
+        outline: 0;
+        border-color: navy;
+    }
+    
+    .form-control.success input {
+        border-color: var(--success-color);
+    }
+    
+    .form-control.error input {
+        border-color: var(--error-color);
+    }
+    
+    .form-control small {
+        color: var(--error-color);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        visibility: hidden;
+    }
+    
+    .form-control.error small {
+        visibility: visible;
+    }
+    
+    .form button {
+        cursor: pointer;
+        background-color: #0f0d2a;
+        border: 2px #3725f8;
+        border-radius: 20px;
+        background: rgb(4, 106, 238);
+        background: linear-gradient(6deg, rgb(5, 89, 199) 8%, rgb(8, 119, 156) 48%, rgba(2, 92, 217, 1) 92%);
+        font-size: 21px;
+        padding: 8px;
+        margin-top: 20px;
+        width: 100%;
+        box-shadow: 10px black;
+        color: white;
+    }
+    
+    button.home {
+        cursor: pointer;
+        background-color: rgb(2, 5, 26);
+        border: 2px lightgrey;
+        color: white;
+        font-size: 16px;
+        padding: 8px;
+        /*width:81.7%*/
+        border-radius: 4px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        margin-left: 39px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
