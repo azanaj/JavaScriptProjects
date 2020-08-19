@@ -37,7 +37,7 @@ const cpassword = document.getElementById('cpassword');
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     if (username.value === '') {
-        showError(username, 'Field is empty!')
+        showError(username, 'wo such emptiness!')
     } else {
         showSuccess(username);
     }

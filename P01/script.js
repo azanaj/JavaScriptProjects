@@ -32,8 +32,16 @@ function checkRequired(inputArray) {
     });
 }
 
+//function to check length
+function checkLength(input, min, max) {
+    if (input.value.length < min) {
+        showError(input, '')
+    }
+}
 //function to get the id of the input field with proper case
-//function getFieldId(input){return input.id.charAT(0).toUpperCase() + input.id.slice(1);}
+function getFieldId(input) {
+    return input.id.charAT(0).toUpperCase() + input.id.slice(1);
+}
 
 //this an event listener for the form on submit
 const form = document.getElementById('form');
@@ -45,4 +53,6 @@ const cpassword = document.getElementById('cpassword');
 form.addEventListener('submit', function(e) {
     e.preventDefault();
     checkRequired([username, email, password, cpassword]);
+    checkLength(username, 3, 10);
+    checkLength(password, 6, 30);
 })
