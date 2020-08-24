@@ -4,7 +4,7 @@
 }
 
 body {
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     background: rgb(255, 94, 0);
     font-family: 'Open Sans', sans-serif;
@@ -12,9 +12,8 @@ body {
 
 .header {
     background-color: black;
-    min-height: 10vh;
+    height: 20vh;
     padding: 30px 20px;
-    text-align: left;
 }
 
 h1 {
@@ -22,6 +21,39 @@ h1 {
     text-align: left;
 }
 
+.box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(237, 236, 243);
+    height: 250vh;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    font-size: 25px;
+    padding: 30px 50px 30px 50px;
+}
+
+h4 {
+    font-size: 50px;
+}
+
 .box2 {
     color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200vh;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    font-size: 20px;
+    padding: 30px 50px 30px 50px;
 }
+
+.im1 {
+    width: 70vh;
+    height: auto;
+}
+
+.p4
