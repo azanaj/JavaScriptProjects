@@ -1,0 +1,4 @@
+bod s y {
+    background: rgb(0, 2, 22);
+    background: linear-gradient(90deg, rgba(0, 2, 22, 1) 0%, rgba(0, 4, 40, 1) 8%, rgba(0, 78, 146, 1) 80%, rgba(3, 60, 110, 1) 90%, rgba(3, 44, 80, 1) 100%);
+}
