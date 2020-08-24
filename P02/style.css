@@ -60,7 +60,6 @@ body {
 }
 
 #last {
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -73,7 +72,7 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     padding: 5px 10px;
     border-radius: 5px;
-    color: rgb(208, 250, 250);
+    color: rgb(231, 251, 251);
     list-style-type: none;
     display: flex;
     justify-content: space-between;
