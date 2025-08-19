@@ -5,31 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleh.css">
-    <link rel="shortcut icon" href="/js logo.png">
     <title>JavaScript Projects</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="header">
+
+        <!-- Header -->
+        <header class="header">
             <h1>My JavaScript Projects</h1>
-        </div>
-        <div class="navbar"></div>
-        <div class="container">
-            <div class="about"></div>
+            <button id="theme-toggle">🌙</button>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about" class="about fade-in">
+            <h2>About</h2>
+            <p>
+                Welcome to my JavaScript projects page!  
+                Here you’ll find some of the projects I’ve built while learning and experimenting with JavaScript.  
+                Each project demonstrates different concepts and features in web development.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <main id="projects" class="container fade-in">
+            <h2>Projects</h2>
+
             <div class="box1">
-                <h4>Project 1</h4>
-                <img class="im1" src="/htmlval.png">
-                <p class="1">Sign Up Form: <a href="/P01/signup.html">Surge Link</a></p>
+                <h3>Project 1</h3>
+                <img class="im1" src="htmlval.png" alt="Sign Up Form Preview">
+                <p>Sign Up Form: <a href="P01/signup.html">Surge Link</a></p>
             </div>
+
             <div class="box2">
-                <h4>Project 2</h4>
-                <img src="/seatslect.png" class="img2">
-                <p>Online ticket booking: <a class="link2" href="P02/seatbooking.html">Surge Link</a> </p>
+                <h3>Project 2</h3>
+                <img class="img2" src="seatslect.png" alt="Ticket Booking Preview">
+                <p>Online Ticket Booking: <a href="P02/seatbooking.html">Surge Link</a></p>
             </div>
-        </div>
-        <div class="footer"></div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer fade-in">
+            <p>&copy; 2025 Azan JavaScript Projects | Built using HTML, CSS, and JavaScript</p>
+        </footer>
+
     </div>
+
+    <!-- ✅ JavaScript file -->
+    <script src="script.js"></script>
 </body>
 
 </html>
